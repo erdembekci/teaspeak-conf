@@ -10,7 +10,7 @@ Type=forking
 ExecStart=/root/TeaSpeak/teastart.sh start
 ExecStop=/root/TeaSpeak/teastart.sh stop
 PIDFile=/root/TeaSpeak/tpid.pid
-RestartSec=15
+RestartSec=5
 Restart=always
 
 [Install]
