@@ -1,0 +1,17 @@
+[Unit]
+Description=TeaSpeak Server
+After=network.target
+
+[Service]
+WorkingDirectory=/root/TeaSpeak/
+User=root
+Group=root
+Type=forking
+ExecStart=/root/TeaSpeak/teastart.sh start
+ExecStop=/root/TeaSpeak/teastart.sh stop
+PIDFile=/root/TeaSpeak/tpid.pid
+RestartSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
